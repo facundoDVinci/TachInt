@@ -33,10 +33,6 @@ void loop() {
 
   float distancia = duracion * 0.0343 / 2;
 
-  Serial.print("Distancia: ");
-  Serial.print(distancia);
-  Serial.println(" cm");
-
   if (distancia <= 50 && !tapaAbierta) {
 
     servoTapa.write(90);
