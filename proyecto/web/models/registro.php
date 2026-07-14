@@ -1,6 +1,6 @@
 <?php
 
-class RegistroUso
+class Registro
 {
     private $conexion;
 
@@ -12,16 +12,14 @@ class RegistroUso
     
     public function obtenerTodos()
     {
-        $sql = "SELECT * FROM registro
-                ORDER BY fecha_hora DESC";
+        $sql = "SELECT * FROM registro ORDER BY fecha_hora DESC";
 
         return $this->conexion->query($sql);
     }
 
     public function obtenerTotal()
     {
-        $sql = "SELECT COUNT(*) AS total
-                FROM registro";
+        $sql = "SELECT COUNT(*) AS total FROM registro";
 
         $resultado = $this->conexion->query($sql);
 
@@ -31,8 +29,7 @@ class RegistroUso
 
     public function obtenerPromedio()
     {
-        $sql = "SELECT AVG(distancia) AS promedio
-                FROM registro";
+        $sql = "SELECT AVG(distancia) AS promedio FROM registro";
 
         $resultado = $this->conexion->query($sql);
 
@@ -41,10 +38,7 @@ class RegistroUso
 
     public function obtenerUltimo()
     {
-        $sql = "SELECT *
-                FROM registro
-                ORDER BY fecha_hora DESC
-                LIMIT 1";
+        $sql = "SELECT * FROM registro ORDER BY fecha_hora DESC LIMIT 1";
 
         $resultado = $this->conexion->query($sql);
 
