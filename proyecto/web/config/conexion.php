@@ -3,7 +3,7 @@
 $host = "localhost";
 $usuario = "root";
 $password = "";
-$bd = "Tachint";
+$bd = "tachint";
 
 $conn = new mysqli($host, $usuario, $password, $bd);
 
